@@ -1,0 +1,20 @@
+/* .nav2 {
+    display: flex;
+  }
+  */
+  .main-content {
+    flex-grow: 1;
+   
+  }
+   
+   .back
+   {
+    background-image:url("homebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+   .home{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: xx-large;
+    text-align: center;   }
