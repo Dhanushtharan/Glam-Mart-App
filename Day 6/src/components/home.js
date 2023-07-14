@@ -1,17 +1,14 @@
-import React, { useRef } from 'react';
+import React , {useState} from 'react';
 import { Link } from 'react-router-dom';
 import logo from './assets/abc.png';
-import personLogo from './assets/person-removebg-preview.png';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import personLogo from './assets/personlogo.png';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin} from 'react-icons/fa';
-
 import './home.css';
 
 const NavigationBar = () => {
   const navStyle = {
-    backgroundColor: 'black',
-    color: 'white',
+    backgroundColor: 'grey',
+    color: 'black',
     padding: '10px',
     display: 'flex',
     justifyContent: 'space-between',
@@ -38,18 +35,18 @@ const NavigationBar = () => {
   };
 
   const logoStyle = {
-    width: '50px',
-    height: '40px',
+    width: '75px',
+    height: '50px',
   };
 
   const personLogoStyle = {
-    width: '30px',
-    height: '25px',
+    width: '75px',
+    height: '50px',
     marginLeft: '10px',
   };
 
   const sidebarStyle = {
-    backgroundColor: 'grey',
+    backgroundColor: 'black',
     padding: '20px',
     width: '200px',
     position: 'fixed',
@@ -71,83 +68,7 @@ const NavigationBar = () => {
     color: 'black',
   };
 
-  const slideshowContainerStyle = {
-    marginTop: '70px',
-    marginLeft: '220px',
-    marginRight: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-  };
 
-  const slideImages = [
-    'https://res.cloudinary.com/dg2jouca2/image/upload/v1689180449/bodycare_rcncv4.webp',
-    'https://res.cloudinary.com/dg2jouca2/image/upload/v1689180448/bodycare_ox5afp.jpg',
-    'https://res.cloudinary.com/dg2jouca2/image/upload/v1689180448/hair_care_kxu2dm.jpg',
-    'https://res.cloudinary.com/dg2jouca2/image/upload/v1689180453/skin_care_hmcdgv.jpg',
-  ];
-
-  const slideProperties = {
-    duration: 2000,
-    transitionDuration: 500,
-    infinite: true,
-    indicators: true,
-    arrows: true,
-    autoplay: true,
-    pauseOnHover: true,
-    canSwipe: true,
-  };
-
-  const slideContainerStyle = {
-    height: '10px',
-    width: '400px',
-    margin: '20px 0',
-  };
-
-  const slideImageStyle = {
-    height: '100%',
-    width: '100%',
-    objectFit: 'cover',
-  };
-
-  const textStyle = {
-    fontSize: '20px',
-    lineHeight: '1.5',
-    margin: '20px',
-    textAlign: 'justify',
-    marginLeft: '300px',
-    fontFamily: 'Georgia',
-  };
-
-  const boxContainerStyle = {
-    display: 'flex',
-  justifyContent: 'flex-start',
-  alignItems: 'center',
-  marginTop: '50px',
-  marginLeft: '400px',
-  };
-
-  const boxStyle = {
-    width: '600px',
-  height: '220px',
-  backgroundColor: 'lightgray',
-  flexDirection: 'column',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  border: '2px solid gray',
-  borderRadius: '5px',
-  transition: 'background-color 0.3s ease',
-  marginRight: '100px',
-  };
-
-  const boxTextStyle = {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-  };
- 
   const footerStyle = {
     backgroundColor: 'black',
     color: 'white',
@@ -169,17 +90,23 @@ const NavigationBar = () => {
     marginRight: '10px',
     color: '#50afbf',
   };
- 
-  const slideshowRef = useRef(null);
-
-
+ const titleStyle={
+  fontFamily:'Impact, Haettenschweiler, Arial Narrow Bold, sans-serif',
+  color:'white',
+  fontSize:'30px',
+  marginLeft:'23%',
+ };
 
   return (
     <>
+    <div className='bodyStyle'>
       <nav style={navStyle}>
         <Link to="/home" style={linkStyle}>
           <img src={logo} alt="Logo" style={logoStyle} />
         </Link>
+        <div style={titleStyle}>
+            Nat-Beauty
+        </div>
         <div style={containerStyle}>
           <Link to="/home" style={linkStyle} activeStyle={hoverStyle}>
             Home
@@ -200,67 +127,41 @@ const NavigationBar = () => {
       <div style={sidebarStyle}>
         <br />
 
-        <Link to="/cart" className="xyz" style={sidebarLinkStyle} activeStyle={hoverStyle}>
-          CART
-        </Link>
-        <Link to="/payment" style={sidebarLinkStyle} activeStyle={hoverStyle}>
-          PAYMENT
+        <Link to="/products" className="xyz" style={sidebarLinkStyle} activeStyle={hoverStyle}>
+          PRODUCTS
         </Link>
         <Link to="/wishlist" style={sidebarLinkStyle} activeStyle={hoverStyle}>
           WISHLIST
         </Link>
-        <Link to="/" style={sidebarLinkStyle} activeStyle={hoverStyle}>
+        <Link to="/cart" style={sidebarLinkStyle} activeStyle={hoverStyle}>
+          CART
+        </Link>
+        <Link to="/orders" style={sidebarLinkStyle} activeStyle={hoverStyle}>
           ORDERS
         </Link>
-        <Link to="/2wheelerInsurance" style={sidebarLinkStyle} activeStyle={hoverStyle}>
-          PAYMENT
-        </Link>
-        
-      </div>
-
-      <div style={slideshowContainerStyle}>
-        <br />
-        <br />
-
-        <div style={slideContainerStyle}>
-          <Slide {...slideProperties} ref={slideshowRef}>
-            {slideImages.map((image, index) => (
-              <div key={index} className="each-slide">
-                <img src={image} alt={`Slide ${index + 1}`} style={slideImageStyle} />
-              </div>
-            ))}
-          </Slide>
+        <div>
         </div>
       </div>
-      <div>
-        <h3 style={textStyle}>
-         
-          Welcome to Glam Mart!<br></br>
-          <br /><br />
-          <br /><br />
-          <br /><br />
-          <br /><br />
-        </h3>
-        <div style={boxContainerStyle}>
-          <div  className="abcd" style={boxStyle}>
-            <h3 style={boxTextStyle}></h3>
-            <p>SKIN CARE<br></br></p>
-          </div>
-          <div  className="abcd" style={boxStyle}>
-            <h3 style={boxTextStyle}></h3>
-            <p>HAIR CARE<br></br></p>
-          </div>
-          <div  className="abcd" style={boxStyle}>
-            <h3 style={boxTextStyle}></h3>
-            <p>BODY<br></br></p>
-          </div>
-          
-        </div>        
-      </div>
+
       
+      <div>
+        <div>
+          <br/><br/>
+          <br /><br />
+          <div className='textStyle'>
+         <h1>Welcome to the Natural-Beauty</h1> 
+              <br></br>
+Discover the latest beauty innovations and indulge in a world of self-care and transformation. We offer a wide range of premium beauty products carefully selected to enhance your natural beauty and elevate your skincare and makeup routines. From luxurious skincare essentials to glamorous cosmetics, we have everything you need to look and feel your best. Explore our curated collection and unlock your true radiance.
+          </div>
+          <br /><br />
+          <br /><br />
+          <br /><br />
+          </div>
+        </div>
       <br></br>
       <br></br>
-      <footer style={footerStyle}>
+    <footer style={footerStyle}>
+    <center>
       <div>
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
           <FaFacebook style={socialIconStyle} />
@@ -275,7 +176,9 @@ const NavigationBar = () => {
           <FaLinkedin style={socialIconStyle} />
         </a>
       </div>
+      </center> 
     </footer>
+    </div>
     </>
   );
 };

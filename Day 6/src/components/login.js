@@ -1,119 +1,70 @@
+import './login.css';
 import React, { useState } from 'react';
-import {useNavigate, Link } from 'react-router-dom';
 
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    fontFamily: 'Arial, sans-serif',
-  },
-  title: {
-    textAlign: 'center',
-    marginBottom: '20px',
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
-    textTransform: 'uppercase',
-    fontFamily: 'Verdana, sans-serif',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '600px',
-    padding: '40px',
-    border: '2px solid black',
-    borderRadius: '4px',
-  },
-  inputContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: '20px',
-  },
-  input: {
-    padding: '10px',
-    fontSize: '16px',
-  },
-  button: {
-    padding: '10px',
-    fontSize: '16px',
-    backgroundColor: '#33bbff',
-    color: 'white',
-    border: 'none',
-    cursor: 'pointer',
-    width: '80px',
-  },
-  error: {
-    color: 'red',
-    marginBottom: '10px',
-    fontSize: '14px',
-    textAlign: 'center',
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    backgroundColor: '#FBE3E4',
-    padding: '8px',
-    borderRadius: '4px',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-  },
-  label: {
-    marginBottom: '5px',
-    fontSize: '16px',
-  },
-};
+import {Link,useNavigate} from 'react-router-dom';
 
 const Login = () => {
+  const navigate=useNavigate('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email === 'admin@example.com' && password === 'password') {
+    // Add your login logic here
+    if (email === '' && password === '') {
+      
+      alert('Invalid email or password');
+    } else {
+     
       setEmail('');
       setPassword('');
+      alert('Login successful!');
       navigate('/home');
-    } else {
-      alert('Invalid username or password');
+   
     }
   };
 
   return (
-    <div style={styles.container}>
-      <form style={styles.form} onSubmit={handleSubmit}>
-        <h2 style={styles.title}>Login</h2>
-        <div style={styles.inputContainer}>
-          <label style={styles.label}>Email:</label>
+   <div className='body'>
+<div className='mart'>
+        <div className='form'>
+      <form className='login-form' onSubmit={handleSubmit} style={{marginTop:'150px'}}>
+        <h2>Login</h2>
+        <div className='mart1'>
+          <label>Email:
           <input
-            style={styles.input}
             type="email"
-            placeholder="Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleEmailChange}
             required
           />
+          </label>
         </div>
-        <div style={styles.inputContainer}>
-          <label style={styles.label}>Password:</label>
+        <div className='pass'>
+          <label>Password:
           <input
-            style={styles.input}
             type="password"
-            placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handlePasswordChange}
             required
           />
+          </label>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <button style={styles.button} type="submit">
-            Login
-          </button>
+        <div className='submit' style={{marginLeft:'-280px'}}>
+          <button type="submit" href="/home">Login</button><br></br>
+          <Link to ='/register'><button type="submit" href="/register">register</button></Link>
         </div>
-        <p>
-          Don't have an account? <Link to="/signup">Sign up</Link>
-        </p>
       </form>
+    </div>
+    </div> 
     </div>
   );
 };
