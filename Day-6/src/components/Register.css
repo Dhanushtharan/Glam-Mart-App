@@ -1,0 +1,29 @@
+.register{
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+    color: white;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        width: 350px;
+        height:350px;
+        margin-left:500px;
+        padding: 50px; 
+        padding-bottom: 10px;
+        background-color:grey;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+.body{
+    background-image: url(https://res.cloudinary.com/duz2ivzgc/image/upload/v1689228360/pexels-suzy-hazelwood-2537930_greign.jpg);
+    background-size: cover;
+    color: white;
+    height: 100%;
+    margin: 0;
+    height:745px;
+    text-align: center;
+}
