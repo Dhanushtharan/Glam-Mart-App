@@ -1,0 +1,67 @@
+.cart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: hwb(187 71% 11% / 0.704);
+  margin-bottom: 10px;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  padding:30 px;
+  max-width: 300px;
+
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.item-name {
+  margin-right: 10px;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+.remove-button {
+  padding: 5px 10px;
+  background-color: #ff5050;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #ff3333;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  font-size: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+.backg{
+  background-color: bisque;
+  background-image: url(https://res.cloudinary.com/duz2ivzgc/image/upload/v1689227789/elsa-olofsson-Pm0K9Y3EPUc-unsplash_hedpt7.jpg);
+  background-size: cover;
+}

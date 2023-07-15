@@ -1,0 +1,52 @@
+.body{
+    background-image: url(https://res.cloudinary.com/duz2ivzgc/image/upload/v1689228360/pexels-suzy-hazelwood-2537930_greign.jpg);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    height:745px;
+}
+.login-form{
+    color: rgb(255, 255, 255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 350px;
+    height:350px;
+    margin-left:500px;
+    padding: 50px; 
+    padding-bottom: 10px;
+    background-color:hsla(190, 100%, 90%, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.mart{
+    background-position: fixed;
+    padding-left:8px;
+    margin:0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: center;
+}
+.form{
+    padding-top: 2px;
+    background-position: fixed;
+    margin: 0;
+    color: white;
+}
+.pass{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.mart1{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    color: white;
+}
+.submit{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 200;    
+    color:whitesmoke;
+    text-align: center;
+    align-items: center;
+
+}
