@@ -1,0 +1,41 @@
+
+.specialists-page {
+    padding: 20px;
+    text-align: center;
+    background-image: url(https://res.cloudinary.com/duz2ivzgc/image/upload/v1689228362/pexels-maria-orlova-4969838_q2ta28.jpg);
+    background-size: cover;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .specialists-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+    margin-bottom: 137px;
+  }
+  
+  .specialist-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    max-width: 300px;
+  }
+  
+  .specialist-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .specialist-card h3 {
+    margin-top: 10px;
+  }
+  
+  .specialist-card p {
+    margin-top: 5px;
+  }
+  
