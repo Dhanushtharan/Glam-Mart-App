@@ -1,0 +1,40 @@
+
+.before-after-page {
+    padding: 20px;
+    text-align: center;
+    background-image: url(https://res.cloudinary.com/duz2ivzgc/image/upload/v1689228361/pexels-polina-kovaleva-8101513_ore7rt.jpg);
+    background-size: cover;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff ;
+  }
+  
+  .before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+  
+  .before-after-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: gray;
+    max-width: 350px;
+    margin-top: 20px;
+    margin-bottom: 569px;
+  }
+  
+  .before-after-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .before-after-item p {
+    margin: 0;
+  }
+  
